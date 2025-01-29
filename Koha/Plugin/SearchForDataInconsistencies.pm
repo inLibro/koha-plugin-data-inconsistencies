@@ -38,7 +38,7 @@ use base qw(Koha::Plugins::Base);
 use C4::Auth;
 use C4::Context;
 
-our $VERSION  = 1.3;
+our $VERSION  = 1.4;
 our $metadata = {
     name            => 'SearchForDataInconsistencies',
     author          => 'Phan Tung Bui, Olivier Vezina',
