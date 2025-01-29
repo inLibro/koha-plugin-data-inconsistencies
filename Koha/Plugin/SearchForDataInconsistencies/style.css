@@ -1,0 +1,75 @@
+td.td-graph {
+  background-color: rgb(84, 63, 5) !important;
+}
+
+td{
+  padding: 0.2em 0.9em 0.0em 0.9em !important;
+}
+
+div#form-selection {
+  width: 400px;
+  margin: 0 auto;
+}
+
+div#form-selection table {
+  width: 100%;
+}
+.doc4 {
+  font-size: 15px; 
+  margin-bottom: 15px; 
+  list-style-type: disc; 
+
+}
+
+.buttonGrey {
+  background: #EEF2FE !important; 
+  border: 1px solid; 
+  border-color: lightgray !important; 
+  padding: 0.4em;
+  border-radius: 4px;
+  color: black;
+}
+
+.buttonGrey:hover{
+  background: #E4E4F2 !important;
+  border-color: lightgray !important; 
+}
+
+.doc5:nth-child(odd){
+  border-bottom: 1px solid #000; 
+}
+
+tr:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.space-element{
+  margin-bottom: 20 px;
+}
+
+
+
+.black-line {
+  border-color: black;
+  border-style: solid; /* You might need to adjust the border style based on your design */
+  border-width: 1px;   /* Adjust the border width as needed */
+}
+
+.first-sentence {
+  font-weight: bold;  /* You can adjust the styling as needed */
+}
+
+.checkBox {
+  color: white;
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+
+
+/* Apply the animation to the cell */
+.colorBox {
+  width: 30px;
+  height: 30px;
+}
