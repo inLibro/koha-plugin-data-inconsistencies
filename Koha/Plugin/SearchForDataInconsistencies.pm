@@ -74,7 +74,7 @@ sub new {
 sub PageHome {
     my ( $self, $args ) = @_;
     my $cgi = $self->{'cgi'};
-    my $locale   = $cgi->cookie('KohaOpacLanguage');
+    my $locale = C4::Languages::getlanguage($cgi);
 
     if($locale eq "fr-CA" || $locale eq "fr"){
         @result_presets = (
@@ -161,7 +161,7 @@ sub PageHome {
 sub PageResult {
     my ( $self, $args ) = @_;
     my $cgi      = $self->{'cgi'};
-    my $locale   = $cgi->cookie('KohaOpacLanguage');
+    my $locale   = C4::Languages::getlanguage($cgi);
     my $template = undef;
 
 
@@ -207,8 +207,9 @@ sub PageResult {
 
     #For every checked preset, generate the appropriate message :
     my @main_messages;
+    my @checkbox_preset = $cgi->multi_param('checkbox-preset');
 
-    for my $key ( $cgi->param('checkbox-preset') ) {
+    for my $key ( @checkbox_preset ) {
         if (exists $method_map{$key}) {
             my ($messages, $numbers) = $method_map{$key}->();  # Get messages and numbers from the method
             push @main_messages, {method_name => $key, messages => [map { decode('UTF-8', $_) } @$messages], numbers => $numbers};  # Store messages in UTF-8
